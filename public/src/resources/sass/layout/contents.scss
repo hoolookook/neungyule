@@ -1,0 +1,90 @@
+.contents {
+  .mainslider {
+    width: 1280px;
+    height: 407px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: auto;
+    position: relative;
+  }
+  .category {
+    width: 1000px;
+    margin: 20px auto 115px;
+    .categoryWrap {
+      width: 190px;
+      float: left;
+      .title {
+        text-align: center;
+        padding-bottom: 28px;
+      }
+      ul {
+        li {
+          overflow: hidden;
+        }
+      }
+    }
+    .firstCate {
+      ul {
+        border: 1px solid #f5a100;
+        li {
+          &:first-child {
+            border-bottom: 1px solid #f5a100;
+            &:hover img {
+              display: block;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              background: url(/public/src/resources/images/neungyule/img_link_ic_on.gif)
+                no-repeat;
+              width: 180px; /* Width of new image */
+              height: 230px; /* Height of new image */
+              padding-left: 190px; /* Equal to width of new image */
+              //   z-index: 9999;
+            }
+          }
+        }
+      }
+    }
+    .midleCate {
+      position: relative;
+      width: 580px;
+      margin: 0 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 282px;
+        left: 0;
+        right: 0;
+        border-top: 1px solid #75bb29;
+        width: 580px;
+        height: 1px;
+      }
+      ul {
+        border: 1px solid #75bb29;
+        li {
+          float: left;
+          &:nth-child(1),
+          &:nth-child(4),
+          &:nth-child(2),
+          &:nth-child(5) {
+            border-right: 1px solid #75bb29;
+          }
+          //   &:nth-child(1),
+          //   &:nth-child(2),
+          //   &:nth-child(3) {
+          //     border-bottom: 1px solid #75bb29;
+          //   }
+        }
+      }
+    }
+    .lastCate {
+      ul {
+        border: 1px solid #a55cb0;
+        li {
+          &:first-child {
+            border-bottom: 1px solid #a55cb0;
+          }
+        }
+      }
+    }
+  }
+}
