@@ -24,7 +24,13 @@ $(".dropbtn").click(function () {
       .css("min-width", "183");
   }
 });
-
+$(".slideBtn").click(function () {
+  if ($(".hideBar").first().is(":hidden")) {
+    $(".hideBar").slideDown("fast");
+  } else {
+    $(".hideBar").slideUp("fast");
+  }
+});
 // function myFunction() {
 //   document.getElementById("myDropdown").classList.toggle("show");
 // }

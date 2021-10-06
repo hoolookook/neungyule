@@ -1,4 +1,13 @@
 header {
+  .topline {
+    position: absolute;
+    top: 0;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
   .gnb_wrap {
     width: 990px;
     margin: 0 auto;
