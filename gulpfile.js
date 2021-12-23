@@ -48,7 +48,8 @@ const paths = {
   },
   css: {
     scss: `${src}${resources}sass/**/*.scss`,
-    src: `${src}**/css/*.css`,
+    // src: `${src}**/css/*.css`,
+    src: `${src}**/css/**/*.css`,
   },
   js: {
     src: [`${src}**/js/*.js`, `!${src}**/js/lib/*.js`],
@@ -89,26 +90,7 @@ var buildType = false, // build : false / dist : true
   distPath = "public/build/", //distributable
   htmlSrc = paths.html.src,
   imgSrc = paths.img.src;
-var AA = true,
-  AB = true,
-  AC = false,
-  AD = true,
-  AE = false,
-  AF = false,
-  AG = false,
-  AH = false;
 
-var update = "2021-08-10";
-/*
-AA : 메인,
-AB : 지원센터소개,
-AC : 권리자찾기,
-AD : 디지털저작권거래소,
-AE : 법정허락,
-AF : 상당한조사지원
-AG : 고객센터,
-AH : My Page
-*/
 function clean() {
   return del(`${distPath}*`);
 }
@@ -134,16 +116,7 @@ async function html() {
           version: version,
           prefix: prefix,
           suffix: suffix,
-          AA: AA,
-          AB: AB,
-          AC: AC,
-          AD: AD,
-          AE: AE,
-          AF: AF,
-          AG: AG,
-          AH: AH,
           buildType: buildType,
-          update: update,
         },
       })
     )
@@ -166,12 +139,20 @@ async function css() {
     .pipe(
       rename({
         prefix: prefix,
+        suffix: suffix,
       })
     )
     //.pipe(gulpif(!buildType, sourcemaps.write('.',{includeContent: true})))
     .pipe(gulpif(!buildType, sourcemaps.write()))
     .pipe(gulpif(buildType, beautify.css()))
     .pipe(gulp.dest(`${distPath}${resources}/css`));
+
+  // gulp
+  //   .src(paths.css.src)
+  //   .pipe(useref())
+  //   .pipe(gulpif(buildType, cleanCSS({ compatibiliy: "ie8" })))
+  //   .pipe(gulpif(buildType, concat("all.css")))
+  //   .pipe(gulp.dest(`${distPath}`));
   // sass min
   if (buildType) {
     gulp
@@ -179,7 +160,7 @@ async function css() {
       .pipe(useref())
       .pipe(gulpif(!buildType, sourcemaps.init()))
       .pipe(sass(sassOption).on("error", sass.logError))
-      .pipe(gulpif(buildType, cleanCSS()))
+      .pipe(gulpif(buildType, cleanCSS({ compatibility: "ie8" })))
       .pipe(
         gulpif(
           buildType,
@@ -192,6 +173,7 @@ async function css() {
           suffix: suffix,
         })
       )
+      .pipe(gulpif(buildType, concat("all.css")))
       //.pipe(gulpif(!buildType, sourcemaps.write('.',{includeContent: true})))
       .pipe(gulpif(!buildType, sourcemaps.write()))
       .pipe(gulp.dest(`${distPath}${resources}/css`));
@@ -211,7 +193,7 @@ async function js() {
     .pipe(
       rename({
         prefix: prefix,
-        //suffix: suffix
+        suffix: suffix,
       })
     )
     .pipe(gulp.dest(`${distPath}`));
@@ -231,7 +213,29 @@ async function js() {
       .pipe(gulp.dest(`${distPath}`));
   }
   // js lib
-  gulp.src(paths.js.lib).pipe(gulp.dest(`${distPath}`));
+  gulp
+    .src(paths.js.lib)
+    .pipe(
+      rename({
+        prefix: prefix,
+        suffix: suffix,
+      })
+    )
+    .pipe(gulp.dest(`${distPath}`));
+  if (buildType) {
+    gulp
+      .src(paths.js.lib)
+      .pipe(gulpif(buildType, stripDebug())) // 모든 console.log들과 alert 제거
+      .pipe(gulpif(buildType, uglify()))
+      .pipe(useref())
+      .pipe(
+        rename({
+          prefix: prefix,
+          suffix: suffix,
+        })
+      )
+      .pipe(gulp.dest(`${distPath}`));
+  }
   // js temp
   gulp
     .src(paths.js.temp)

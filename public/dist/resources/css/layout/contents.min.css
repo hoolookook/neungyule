@@ -1,0 +1,134 @@
+.contents .sliderWrap {
+    height: 407px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.contents .sliderWrap .mainslider {
+    width: 1280px;
+    height: 407px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contents .sliderWrap .slick-dots {
+    bottom: 45px;
+}
+
+.contents .category {
+    width: 1000px;
+    margin: 0px auto 115px;
+    overflow: hidden;
+}
+
+.contents .category .categoryWrap {
+    width: 190px;
+    float: left;
+}
+
+.contents .category .categoryWrap .title {
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+.contents .category .categoryWrap ul li {
+    overflow: hidden;
+    width: 185px;
+}
+
+.contents .category .categoryWrap ul li:hover img {
+    display: block;
+    background-repeat: no-repeat;
+    height: 230px;
+    padding-left: 185px;
+}
+
+.contents .category .firstCate ul {
+    border: 1px solid #f5a100;
+}
+
+.contents .category .firstCate ul li:first-child {
+    border-bottom: 1px solid #f5a100;
+}
+
+.contents .category .firstCate ul li:first-child:hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_ic_on.gif);
+}
+
+.contents .category .firstCate ul li:last-child:hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_kids_on.gif);
+}
+
+.contents .category .midleCate {
+    position: relative;
+    width: 580px;
+    margin: 0 16px;
+}
+
+.contents .category .midleCate::before {
+    content: "";
+    position: absolute;
+    top: 282px;
+    left: 10px;
+    right: 0;
+    border-top: 1px solid #75bb29;
+    width: 560px;
+    height: 1px;
+}
+
+.contents .category .midleCate ul {
+    border: 1px solid #75bb29;
+    width: 560px;
+}
+
+.contents .category .midleCate ul li {
+    float: left;
+}
+
+.contents .category .midleCate ul li:nth-child(1),
+.contents .category .midleCate ul li:nth-child(4),
+.contents .category .midleCate ul li:nth-child(2),
+.contents .category .midleCate ul li:nth-child(5) {
+    border-right: 1px solid #75bb29;
+}
+
+.contents .category .midleCate ul li:nth-child(1):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_textbook_on.gif);
+}
+
+.contents .category .midleCate ul li:nth-child(2):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_study_on.gif);
+}
+
+.contents .category .midleCate ul li:nth-child(3):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_mathfun_on.gif);
+}
+
+.contents .category .midleCate ul li:nth-child(4):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_junior_on.gif);
+}
+
+.contents .category .midleCate ul li:nth-child(5):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_times_on.gif);
+}
+
+.contents .category .midleCate ul li:nth-child(6):hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_class_on.gif);
+}
+
+.contents .category .lastCate ul {
+    border: 1px solid #a55cb0;
+}
+
+.contents .category .lastCate ul li:first-child {
+    border-bottom: 1px solid #a55cb0;
+}
+
+.contents .category .lastCate ul li:first-child:hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_tomato_on.gif);
+}
+
+.contents .category .lastCate ul li:last-child:hover img {
+    background: url(/public/src/resources/images/neungyule/img_link_edu_on.gif);
+}
