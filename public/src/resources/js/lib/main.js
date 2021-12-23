@@ -32,6 +32,17 @@ $(".slideBtn").click(function () {
     $(".hideBar").slideUp("fast");
   }
 });
+
+$(function () {
+  $(".contents .category .midleCate ul li").hover(
+    function () {
+      $(this).css("width", "500px");
+    },
+    function () {
+      $(this).css("background-color", "red");
+    }
+  );
+});
 // function myFunction() {
 //   document.getElementById("myDropdown").classList.toggle("show");
 // }

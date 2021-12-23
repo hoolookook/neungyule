@@ -29,15 +29,15 @@
         li {
           overflow: hidden;
           width: 185px;
-          &:hover {
-            img {
-              display: block;
-              background-repeat: no-repeat;
-              // width: 185px;
-              height: 230px;
-              padding-left: 185px;
-            }
-          }
+          // &:hover {
+          //   img {
+          //     display: block;
+          //     background-repeat: no-repeat;
+          //     // width: 185px;
+          //     height: 230px;
+          //     padding-left: 185px;
+          //   }
+          // }
         }
       }
     }
