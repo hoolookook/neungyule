@@ -11,126 +11,74 @@
       position: relative;
     }
     .slick-dots {
-      bottom: 45px;
+      bottom: 5px;
     }
   }
   .category {
     width: 1000px;
     margin: 0px auto 115px;
     overflow: hidden;
+    padding-right: 14px;
     .categoryWrap {
-      width: 190px;
-      float: left;
+      box-sizing: border-box;
       .title {
+        margin: 0 auto;
         text-align: center;
-        padding-bottom: 28px;
+        padding-bottom: 20px;
       }
       ul {
+        text-align: center;
         li {
-          overflow: hidden;
-          width: 185px;
-          // &:hover {
-          //   img {
-          //     display: block;
-          //     background-repeat: no-repeat;
-          //     // width: 185px;
-          //     height: 230px;
-          //     padding-left: 185px;
-          //   }
-          // }
+          margin: 0 -4.5px -3px 0;
+          a {
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+
+    .firstCate,
+    .lastCate {
+      width: 20%;
+      float: left;
+      ul {
+        li {
+          display: inline-block;
+          &:first-child {
+            border-bottom: none;
+          }
         }
       }
     }
     .firstCate {
-      ul {
+      li {
         border: 1px solid #f5a100;
-        li {
-          &:first-child {
-            border-bottom: 1px solid #f5a100;
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_ic_on.gif);
-            }
-          }
-          &:last-child {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_kids_on.gif);
-            }
-          }
-        }
-      }
-    }
-    .midleCate {
-      position: relative;
-      width: 580px;
-      margin: 0 16px;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 282px;
-        left: 10px;
-        right: 0;
-        border-top: 1px solid #75bb29;
-        width: 560px;
-        height: 1px;
-      }
-      ul {
-        border: 1px solid #75bb29;
-        width: 560px;
-        li {
-          float: left;
-          &:nth-child(1),
-          &:nth-child(4),
-          &:nth-child(2),
-          &:nth-child(5) {
-            border-right: 1px solid #75bb29;
-          }
-          &:nth-child(1) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_textbook_on.gif);
-            }
-          }
-          &:nth-child(2) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_study_on.gif);
-            }
-          }
-          &:nth-child(3) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_mathfun_on.gif);
-            }
-          }
-          &:nth-child(4) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_junior_on.gif);
-            }
-          }
-          &:nth-child(5) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_times_on.gif);
-            }
-          }
-          &:nth-child(6) {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_class_on.gif);
-            }
-          }
-        }
       }
     }
     .lastCate {
-      ul {
+      li {
         border: 1px solid #a55cb0;
+      }
+    }
+    .midleCate {
+      width: 60%;
+      float: left;
+      ul {
         li {
-          &:first-child {
-            border-bottom: 1px solid #a55cb0;
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_tomato_on.gif);
-            }
+          display: inline-block;
+          border-right: 1px solid #75bb29;
+          border-top: 1px solid #75bb29;
+          &:nth-child(1),
+          &:nth-child(4) {
+            border-left: 1px solid #75bb29;
           }
-          &:last-child {
-            &:hover img {
-              background: url(/public/src/resources/images/neungyule/img_link_edu_on.gif);
-            }
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6) {
+            border-bottom: 1px solid #75bb29;
           }
         }
       }

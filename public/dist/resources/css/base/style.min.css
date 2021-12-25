@@ -48,10 +48,6 @@ em {
     font-style: normal;
 }
 
-.hidden {
-    display: none;
-}
-
 /* IR 효과 */
 .ir_pm {
     display: block;
@@ -462,118 +458,79 @@ header .gnb_wrap .gnb2 a:last-child::after {
 }
 
 .contents .category .categoryWrap {
-    width: 190px;
-    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .contents .category .categoryWrap .title {
+    margin: 0 auto;
     text-align: center;
-    padding-bottom: 28px;
+    padding-bottom: 20px;
+}
+
+.contents .category .categoryWrap ul {
+    text-align: center;
 }
 
 .contents .category .categoryWrap ul li {
-    overflow: hidden;
-    width: 185px;
+    margin: 0 -4.5px -3px 0;
 }
 
-.contents .category .categoryWrap ul li:hover img {
+.contents .category .categoryWrap ul li a img {
     display: block;
-    background-repeat: no-repeat;
-    height: 230px;
-    padding-left: 185px;
+    margin: 0 auto;
 }
 
-.contents .category .firstCate ul {
-    border: 1px solid #f5a100;
-}
-
-.contents .category .firstCate ul li:first-child {
-    border-bottom: 1px solid #f5a100;
-}
-
-.contents .category .firstCate ul li:first-child:hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_ic_on.gif);
-}
-
-.contents .category .firstCate ul li:last-child:hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_kids_on.gif);
-}
-
-.contents .category .midleCate {
-    position: relative;
-    width: 580px;
-    margin: 0 16px;
-}
-
-.contents .category .midleCate::before {
-    content: "";
-    position: absolute;
-    top: 282px;
-    left: 10px;
-    right: 0;
-    border-top: 1px solid #75bb29;
-    width: 560px;
-    height: 1px;
-}
-
-.contents .category .midleCate ul {
-    border: 1px solid #75bb29;
-    width: 560px;
-}
-
-.contents .category .midleCate ul li {
+.contents .category .firstCate,
+.contents .category .lastCate {
+    width: 20%;
     float: left;
 }
 
-.contents .category .midleCate ul li:nth-child(1),
-.contents .category .midleCate ul li:nth-child(4),
-.contents .category .midleCate ul li:nth-child(2),
-.contents .category .midleCate ul li:nth-child(5) {
-    border-right: 1px solid #75bb29;
+.contents .category .firstCate ul li,
+.contents .category .lastCate ul li {
+    display: inline-block;
 }
 
-.contents .category .midleCate ul li:nth-child(1):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_textbook_on.gif);
+.contents .category .firstCate ul li:first-child,
+.contents .category .lastCate ul li:first-child {
+    border-bottom: none;
 }
 
-.contents .category .midleCate ul li:nth-child(2):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_study_on.gif);
+.contents .category .firstCate li {
+    border: 1px solid #f5a100;
 }
 
-.contents .category .midleCate ul li:nth-child(3):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_mathfun_on.gif);
-}
-
-.contents .category .midleCate ul li:nth-child(4):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_junior_on.gif);
-}
-
-.contents .category .midleCate ul li:nth-child(5):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_times_on.gif);
-}
-
-.contents .category .midleCate ul li:nth-child(6):hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_class_on.gif);
-}
-
-.contents .category .lastCate ul {
+.contents .category .lastCate li {
     border: 1px solid #a55cb0;
 }
 
-.contents .category .lastCate ul li:first-child {
-    border-bottom: 1px solid #a55cb0;
+.contents .category .midleCate {
+    width: 60%;
+    float: left;
 }
 
-.contents .category .lastCate ul li:first-child:hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_tomato_on.gif);
+.contents .category .midleCate ul li {
+    display: inline-block;
+    border-right: 1px solid #75bb29;
+    border-top: 1px solid #75bb29;
 }
 
-.contents .category .lastCate ul li:last-child:hover img {
-    background: url(/public/src/resources/images/neungyule/img_link_edu_on.gif);
+.contents .category .midleCate ul li:nth-child(1),
+.contents .category .midleCate ul li:nth-child(4) {
+    border-left: 1px solid #75bb29;
+}
+
+.contents .category .midleCate ul li:nth-child(4),
+.contents .category .midleCate ul li:nth-child(5),
+.contents .category .midleCate ul li:nth-child(6) {
+    border-bottom: 1px solid #75bb29;
 }
 
 footer {
     position: relative;
+    padding-bottom: 60px;
 }
 
 footer:after {
