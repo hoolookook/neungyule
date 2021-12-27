@@ -5,8 +5,12 @@ $(document).ready(function () {
     arrows: true,
   });
 });
+$(function () {
+  var copyObj = $(".slick-dots").clone();
+  $(".dotscustom").append(copyObj);
+});
 // $(function () {
-//   var copyObj = $(".slick-dots").clone();
+//   var copyObj = $(".slick-dots").addClass("dotscustom").clone();
 //   // $(".slick-dots").remove();
 //   $(".sliderWrap").append(copyObj);
 //   //slick의 dot를 옮겨서 body의 중앙으로 오게 만든다 요소들은 복사해서 추가시켜준다.
