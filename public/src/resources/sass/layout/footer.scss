@@ -91,6 +91,7 @@ footer {
           z-index: 1;
           right: 4px;
           bottom: 15px;
+          box-sizing: border-box;
           a {
             font-size: 15px;
             color: #333333;
@@ -111,17 +112,11 @@ footer {
   }
 }
 #bottomBar {
-  // position: relative;
-  // position: fixed;
-  // left: 50%;
-  // bottom: 0;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  display: inline-block;
   background: #fff;
-  z-index: 999;
   .bottomBarWrap,
   .hideBar {
     margin: 0 auto;

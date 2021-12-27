@@ -17,16 +17,17 @@ $(function () {
 // });
 $(".dropbtn").click(function () {
   if ($(".dropdown-content").css("display") == "none") {
-    jQuery(".dropdown-content").css("display", "block");
+    $(".dropdown-content").css("display", "block");
     $(".familySite img").attr(
       "src",
       "/public/src/resources/images/neungyule/bg_family_close.png"
     );
   } else {
-    jQuery(".dropdown-content").css("display", "none");
-    $(".familySite img")
-      .attr("src", "/public/src/resources/images/neungyule/bg_family.png")
-      .css("min-width", "183");
+    $(".dropdown-content").css("display", "none");
+    $(".familySite img").attr(
+      "src",
+      "/public/src/resources/images/neungyule/bg_family.png"
+    );
   }
 });
 $(".slideBtn").click(function () {
